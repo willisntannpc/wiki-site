@@ -1,0 +1,184 @@
+/* Basic styles for the body and general page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header and navigation bar styles */
+header {
+    background-color: #3366cc;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+header nav ul li a:hover {
+    background-color: #27478b;
+    border-radius: 5px;
+}
+
+/* Main content layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+aside.sidebar {
+    width: 25%;
+    background-color: #e9ecef;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+aside.sidebar h3 {
+    margin-top: 0;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside.sidebar ul li {
+    margin: 10px 0;
+}
+
+aside.sidebar ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+aside.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Article content styles */
+article {
+    width: 75%;
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+article h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for small devices (tablets and phones) */
+@media screen and (max-width: 768px) {
+    /* Stack the sidebar and article vertically */
+    .content {
+        flex-direction: column;
+    }
+
+    /* Make the sidebar take full width */
+    aside.sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Make the article full width */
+    article {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Adjust the header navigation to wrap */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust header logo and navigation for small screens */
+    header .logo a {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+/* Further adjustments for very small devices (phones) */
+@media screen and (max-width: 480px) {
+    header .logo a {
+        font-size: 18px;
+    }
+
+    article h1 {
+        font-size: 28px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    aside.sidebar h3 {
+        font-size: 20px;
+    }
+}
